@@ -16,5 +16,5 @@
     ],
     "theme_color": "#8840BF",
     "background_color": "#8840BF",
-    "display": "fullscreen"
+    "display": "standalone"
   }
