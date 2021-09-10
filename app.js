@@ -27,7 +27,7 @@ window.addEventListener('load', () => {
         const API_KEY = 'cb8df9c7a0932addba8d881d9014c682';
         let topic = searchInput.value;
 
-        let url =  `https://gnews.io/api/v4/search?q=${topic}&token=${API_KEY}`;
+        let url =  `https://gnews.io/api/v4/search?q=${topic}&lang=en&token=${API_KEY}`;
 
         let req = new Request(url);
 
