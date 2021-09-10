@@ -38,13 +38,13 @@ window.addEventListener('load', () => {
             .then(function(res) {
                 return res.json();
             }).then(data => {
-                data.articles.forEach(article => {
-                    result.innerHTML +=
+                // data.articles.forEach(article => {
+                    result.innerHTML =
                     '<div class="newsCard">' +
-                        '<img src=" '+ article.urlToImage + ' " style="width: 100%"> ' +
+                        '<img src=" '+ data.articles.urlToImage + ' " style="width: 100%"> ' +
                         '<li>' +
                             ' <h4> ' +
-                                '<a href=" '+ article.url + ' " target="_blank"> '+ article.title +'</a>' +
+                                '<a href=" '+ data.articles.url + ' " target="_blank"> '+ data.articles.title +'</a>' +
                             '</h4>';
                     //         <br>
                     //         <a>${article.description}</a>
@@ -57,7 +57,7 @@ window.addEventListener('load', () => {
                     // </div>
                     // `;
                 })
-            })
+            // })
 
             
     };
