@@ -47,7 +47,6 @@ window.addEventListener('load', () => {
                             <a>${article.content}</a>
                         </li>
                         <div class="newsBar">
-                            <a><strong>Authour: </strong> ${article.author}</a>
                             <a> <strong>Plublish date: </strong> ${article.publishedAt.slice(0, 10)}</a>
                             <a href="${article.source.url}"><strong>Source: </strong> ${article.source.name}</a>
                         </div>
