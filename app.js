@@ -24,13 +24,10 @@ window.addEventListener('load', () => {
 
     getData = () => {
 
-        const API_KEY = 'be6b30d5b7c74cfbb8f379507d56e01a';
+        const API_KEY = 'cb8df9c7a0932addba8d881d9014c682';
         let topic = searchInput.value;
 
-        let url =   'https://newsapi.org/v2/everything?' +
-                    'q='+ topic +
-                    '&sortBy=popularity&' +
-                    'apiKey=' + API_KEY;
+        let url =  `https://gnews.io/api/v4/search?q=${topic}&token=${API_KEY}`;
 
         let req = new Request(url);
 
@@ -41,18 +38,18 @@ window.addEventListener('load', () => {
                 data.articles.forEach((article) => {
                     result.innerHTML += `
                     <div class="newsCard">
-                        <img src="${article.urlToImage}" style="width: 100%">
+                        <img src="${article.image}" style="width: 100%">
                         <li>
                             <h4>
                                 <a href="${article.url}" target="_blank">${article.title}</a>
                             </h4>
                             <br>
-                            <a>${article.description}</a>
+                            <a>${article.content}</a>
                         </li>
                         <div class="newsBar">
                             <a><strong>Authour: </strong> ${article.author}</a>
                             <a> <strong>Plublish date: </strong> ${article.publishedAt.slice(0, 10)}</a>
-                            <a><strong>Source: </strong> ${article.source.name}</a>
+                            <a href="${article.source.url}"><strong>Source: </strong> ${article.source.name}</a>
                         </div>
                     </div>
                     `;
