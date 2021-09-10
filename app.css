@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html{
+    height: 100%;
+    box-sizing:border-box;
+}
+
+*,*:before,*:after{
+    box-sizing:inherit
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.container{
+    width: 100vw;
+    min-height: 100vh;
+    cursor: default;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+header{
+    background: #8840BF;
+    width: 100vw;
+    color: rgb(241, 241, 241);
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+span::selection{
+    background: transparent
+}
+
+.style{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    padding: 3.5px;
+    border-radius: 5rem;
+    box-shadow: 0 0 5px 0px rgb(88, 0, 129, .3);   
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 25px 0;
+    /* background: rgb(228, 188, 255); */
+    box-shadow: 0 30px 20px 5px rgb(255, 255, 255);
+    background-image: linear-gradient(
+        to top right, rgb(218, 182, 241) 5%, rgb(245, 223, 255)
+    ); 
+}
+
+#searchInput{
+    width: 60vw;
+    height: 40px;
+    padding: 5px 20px;
+    /* background: transparent; */
+}
+
+#submit{
+    height: 40px;
+    width: 80px;
+    cursor: pointer;
+    background: #8840BF;
+    color: rgb(241, 241, 241);
+    font-size: medium;
+}
+
+#submit:active{
+    background: #7131a1;
+    transform: scale(.98);
+}
+
+input{
+    border: none;
+    outline: none;
+}
+
+.style, input{
+    border-radius: 2rem;
+} 
+
+.resultContiner{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    padding: 20px 0;
+    position: absolute;
+    top: 155px;
+}
+
+#result{
+    margin: 0 5vw;
+}
+
+li{
+    padding: 20px;
+}
+
+.newsCard{
+    margin: 20px 0;
+    box-shadow: 0 0 0px 2px rgb(228, 188, 255, 1);
+    border-radius: 5px;
+    width: 90vw;
+}
+
+.newsCard a:visited{
+    color: blue;
+}
+
+.newsBar{
+    background: rgb(218, 182, 241);
+    width: 100%;
+    min-height: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 5px;
+    border-radius: 0 0 5px 5px;
+    text-align: center;
+}
+
+.newsBar a{
+    color: #000;
+    padding: 3.5px 10px;
+}
+
+.fixed{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+a::selection{
+    display: none;
+}
+
+@media screen and (min-width: 960px) {
+    .newsCard{
+        width: 60vw;
+    }
+}
