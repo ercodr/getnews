@@ -1,7 +1,7 @@
 {
     "name": "GetNews Int",
     "short_name": "GetNews Int",
-    "start_url": "./index.html?home=true",
+    "start_url": "./index.html",
     "description": "News App",
     "lang": "en-US",
     "developer": {"name": "Ernest Kumashie"},
