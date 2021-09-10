@@ -38,26 +38,26 @@ window.addEventListener('load', () => {
             .then(function(res) {
                 return res.json();
             }).then(data => {
-                // data.articles.forEach(article => {
-                    result.innerHTML =
-                    '<div class="newsCard">' +
-                        '<img src=" '+ data.articles.urlToImage + ' " style="width: 100%"> ' +
-                        '<li>' +
-                            ' <h4> ' +
-                                '<a href=" '+ data.articles.url + ' " target="_blank"> '+ data.articles.title +'</a>' +
-                            '</h4>';
-                    //         <br>
-                    //         <a>${article.description}</a>
-                    //     </li>
-                    //     <div class="newsBar">
-                    //         <a><strong>Authour: </strong> ${article.author}</a>
-                    //         <a> <strong>Plublish date: </strong> ${article.publishedAt.slice(0, 10)}</a>
-                    //         <a><strong>Source: </strong> ${article.source.name}</a>
-                    //     </div>
-                    // </div>
-                    // `;
+                data.articles.forEach((article) => {
+                    result.innerHTML += `
+                    <div class="newsCard">
+                        <img src="${article.urlToImage}" style="width: 100%">
+                        <li>
+                            <h4>
+                                <a href="${article.url}" target="_blank">${article.title}</a>
+                            </h4>
+                            <br>
+                            <a>${article.description}</a>
+                        </li>
+                        <div class="newsBar">
+                            <a><strong>Authour: </strong> ${article.author}</a>
+                            <a> <strong>Plublish date: </strong> ${article.publishedAt.slice(0, 10)}</a>
+                            <a><strong>Source: </strong> ${article.source.name}</a>
+                        </div>
+                    </div>
+                    `;
                 })
-            // })
+            })
 
             
     };
