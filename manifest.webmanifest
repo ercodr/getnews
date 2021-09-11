@@ -5,7 +5,7 @@
     "description": "News App",
     "lang": "en-US",
     "developer": {
-        "name": "Ernest Kumashie"
+        "name": "Alphascid Technologies"
     },
     "icons": [
       {
@@ -15,6 +15,6 @@
       }
     ],
     "theme_color": "#8840BF",
-    "background_color": "#8840BF",
+    "background_color": "#e4b7ff",
     "display": "standalone"
   }
